@@ -36,7 +36,7 @@
 <script>
 import axios from "axios";
 import Cookies from "js-cookie"
-import { setToken, getToken } from "./check";
+// import { setToken, getToken } from "./check";
 
 export default {
   data() {
@@ -66,8 +66,8 @@ export default {
             const { data } = response;
             if (data.message === '登录成功') {
               this.$message.success('登录成功！');
-              setToken(data.user_info.token);
-              this.$router.push('/home');
+              // setToken(data.user_info.token);
+              this.$router.push('/list');
             } else {
               this.$message.error(`登录失败: ${data.error}`);
             }
